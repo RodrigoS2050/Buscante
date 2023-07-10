@@ -1,0 +1,147 @@
+<main
+  class="container"
+  infinite-scroll
+  [infiniteScrollDistance]="distance"
+  [infiniteScrollThrottle]="throttle"
+  (scrolled)="onScroll()"
+>
+  <section class="col-10 col-xl-8 mx-auto">
+    <h3 class="text-center pb-2">Que livro você procura?</h3>
+    <div class="input-group mb-2">
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Procurar Livro"
+        aria-describedby="search-icon"
+        name="searchValue"
+        [formControl]="searchValue"
+      />
+      <span class="input-group-text" id="search-icon"
+        ><i class="bi bi-search"></i
+      ></span>
+    </div>
+    <p class="text-center mb-5">Busque por assunto, autoria, nome...</p>
+    <div class="text-danger" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+    <div *ngIf="booksFound$ | async">
+      <p class="text-center mb-4">{{ totalOfBooks }} resultados encontrados:</p>
+    </div>
+    <section *ngIf="booksFound$ | async" class="container row mx-auto">
+      <div *ngFor="let book of booksResults" class="col-12 col-md-6 col-xxl-4">
+        <div class="card mb-4">
+          <img
+            src="{{
+              book.thumbnail !== undefined
+                ? book.thumbnail
+                : 'assets/unavailable-cover.jpg'
+            }}"
+            class="card-img-top"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ book.title | slice : 0 : 50 }}</h5>
+            <p class="card-text">
+              <strong>Autoria:</strong> {{ book.authors?.join(", ") }}
+            </p>
+            <p class="card-text">
+              <strong>Data de publicação:</strong>
+              {{ book.publishedDate | date : "dd/MM/yyyy" }}
+            </p>
+            <p class="card-text">
+              <strong>Editora:</strong> {{ book.publisher | slice : 0 : 20 }}
+            </p>
+            <button
+              (click)="openModal(book)"
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Mais Detalhes
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div *ngIf="isLoading" class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div *ngIf="!isLoading">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="d-flex align-items-center justify-content-center">
+              <h1 class="text-center mb-4 mb-lg-0">
+                Busque o livro <br />
+                que quiser na <br />
+                nossa estante!
+              </h1>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img
+              class="img-fluid"
+              src="assets/bookcase-illustration.svg"
+              alt="Ilustração de uma pessoa em pé ao lado de uma estante com livros e plantas"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Modal -->
+<section
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <article class="modal-content">
+      <header class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          {{ selectedBook?.title }}
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </header>
+      <div class="modal-body">
+        <div *ngIf="selectedBook">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img
+              [src]="selectedBook.thumbnail"
+              class="img-fluid text-center"
+              alt="Capa do livro"
+            />
+            <div>
+              <p>
+                <strong>Autoria:</strong> {{ selectedBook.authors?.join(", ") }}
+              </p>
+              <p>
+                <strong>Data de publicação:</strong>
+                {{ selectedBook.publishedDate | date : "dd/MM/yyyy" }}
+              </p>
+              <p><strong>Editora:</strong> {{ selectedBook.publisher }}</p>
+            </div>
+          </div>
+          <p><strong>Descrição:</strong> {{ selectedBook.description }}</p>
+          <a
+            class="btn btn-primary text-light text-center"
+            [href]="selectedBook.previewLink"
+            target="_blank"
+            >Visualizar no Google Books</a
+          >
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

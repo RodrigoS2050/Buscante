@@ -1,0 +1,29 @@
+<header class="p-3 mb-5">
+  <nav class="d-flex align-items-center justify-content-around">
+    <img
+      class="img-fluid"
+      src="assets/logo.png"
+      alt="Logo da aplicação Buscante"
+    />
+    <ul class="d-flex gap-3">
+      <li>
+        <a
+          class="text-light link-efeito"
+          routerLink="home"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Início</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-light link-efeito"
+          routerLink="about"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Sobre</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,53 @@
+header {
+  background-color: #050c42 !important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-efeito {
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.link-efeito::before,
+.link-efeito::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #eeeeee;
+  transition: width 0.3s ease;
+}
+
+.link-efeito::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.link-efeito::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.link-efeito.active-link::before,
+.link-efeito.active-link::after,
+.link-efeito:hover::before,
+.link-efeito:hover::after {
+  width: 100%;
+}
+
+i {
+  color: red;
+}
