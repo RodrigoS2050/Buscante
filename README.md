@@ -1,6 +1,6 @@
 # Buscante
 
-Buscante é uma aplicação web inovadora que permite aos usuários descobrir e explorar uma ampla variedade de livros com facilidade. Com a integração da Google Books API, o Buscante oferece uma experiência intuitiva e envolvente para os amantes da leitura que desejam ampliar seus horizontes literários.
+Buscante é uma aplicação web inovadora que permite aos usuários descobrir e explorar uma ampla variedade de livros com facilidade. Com a integração da poderosa Google Books API, o Buscante oferece uma experiência intuitiva e envolvente para os amantes da leitura que desejam ampliar seus horizontes literários.
 
 ## Recursos Principais
 
@@ -8,6 +8,7 @@ Buscante é uma aplicação web inovadora que permite aos usuários descobrir e 
 - Input com validação
 - Cards com uma breve descrição dos Livros
 - Modal com detalhes do livro
+- Scroll Infinito para carregamento de nos livros
 - Ilustrações da [UnDraw](https://undraw.co/illustrations)
 
 ## Tecnologias
