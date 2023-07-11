@@ -31,7 +31,7 @@ Este é um projeto totalmente responsivo utilizando o Bootstrap
 ## Testes Unitários
 Este projeto utiliza o Karma e o Jasmine para criação de testes unitários.
 
-![image](https://github.com/RodrigoS2050/Buscante/assets/97991094/800a84ce-49a8-4471-98f2-ce47826fdf09)
+![image](https://github.com/RodrigoS2050/Buscante/assets/97991094/b4bc2e3e-e339-4d00-af49-8416421bcbb9)
 
 # Como rodar o projeto na sua máquina
 
