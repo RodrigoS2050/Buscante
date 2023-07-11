@@ -19,6 +19,12 @@ Buscante é uma aplicação web inovadora que permite aos usuários descobrir e 
 - Jasmine
 - Infinite Scroll
 
+## Imagens do Projeto
+
+![image](https://github.com/RodrigoS2050/Buscante/assets/97991094/d00c2700-edf2-4d82-bf42-534c874a67aa)
+
+![image](https://github.com/RodrigoS2050/Buscante/assets/97991094/6d4bb873-94c9-4b9e-bd1d-5977225d415b)
+
 ## Projeto Completo (Web)
 
 
