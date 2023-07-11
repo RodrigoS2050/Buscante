@@ -15,6 +15,7 @@ Buscante é uma aplicação web inovadora que permite aos usuários descobrir e 
 - Angular
 - TypeScript
 - Bootstrap
+- RxJS
 - Karma
 - Jasmine
 - Infinite Scroll
