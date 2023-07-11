@@ -20,12 +20,15 @@
         ><i class="bi bi-search"></i
       ></span>
     </div>
-    <p class="text-center mb-5">Busque por assunto, autoria, nome...</p>
+    <p class="text-center mb-4">Busque por assunto, autoria, nome...</p>
     <div class="text-danger" *ngIf="errorMessage">
       {{ errorMessage }}
     </div>
-    <div *ngIf="booksFound$ | async">
-      <p class="text-center mb-4">{{ totalOfBooks }} resultados encontrados:</p>
+    <div class="mb-4" *ngIf="booksFound$ | async">
+      <p class="text-center">{{ totalOfBooks }} resultados encontrados</p>
+      <p *ngIf="totalOfBooks === 0" class="text-center text-danger">
+        Por favor, informe um valor válido
+      </p>
     </div>
     <section *ngIf="booksFound$ | async" class="container row mx-auto">
       <div *ngFor="let book of booksResults" class="col-12 col-md-6 col-xxl-4">

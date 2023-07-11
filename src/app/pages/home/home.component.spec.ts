@@ -126,7 +126,7 @@ describe('HomeComponent', () => {
     expect(text?.textContent).toEqual('Busque por assunto, autoria, nome...');
   });
 
-  it('should render the text in the h1 element', () => {
+  it('should render text in element h1 if isLoading is false', () => {
     component.isLoading = false;
     fixture.detectChanges();
     const element: HTMLElement = fixture.nativeElement;
@@ -136,7 +136,7 @@ describe('HomeComponent', () => {
     );
   });
 
-  it('should contain a logo image with the correct attributes', () => {
+  it('should contain a logo image with the correct attributes if isLoading is false', () => {
     component.isLoading = false;
     fixture.detectChanges();
     const image = fixture.nativeElement.querySelector('.img-fluid');

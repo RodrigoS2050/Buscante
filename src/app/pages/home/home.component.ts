@@ -60,7 +60,7 @@ export class HomeComponent {
       this.isLoading = false;
     }),
     catchError(() => {
-      this.errorMessage = 'Ops, ocorreu um erro. Recarregue a aplicação.';
+      this.errorMessage = 'Ocorreu um erro. Recarregue a aplicação.';
       return EMPTY;
     })
   );
