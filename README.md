@@ -1,27 +1,66 @@
 # Buscante
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+Buscante é uma aplicação web inovadora que permite aos usuários descobrir e explorar uma ampla variedade de livros com facilidade. Com a integração da poderosa Google Books API, o Buscante oferece uma experiência intuitiva e envolvente para os amantes da leitura que desejam ampliar seus horizontes literários.
 
-## Development server
+## Recursos Principais
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Input para pesquisa de livros
+- Input com validação
+- Cards com uma breve descrição dos Livros
+- Modal com detalhes do livro
+- Scroll Infinito para carregamento de nos livros
+- Ilustrações da [UnDraw](https://undraw.co/illustrations)
 
-## Code scaffolding
+## Tecnologias
+- Angular
+- TypeScript
+- Bootstrap
+- Karma
+- Jasmine
+- Infinite Scroll
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Projeto Completo (Web)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Projeto Completo (Mobile)
+Este é um projeto totalmente responsivo utilizando o Bootstrap
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Testes Unitários
+Este projeto utiliza o Karma e o Jasmine para criação de testes unitários.
 
-## Further help
+![image](https://github.com/RodrigoS2050/Buscante/assets/97991094/b4bc2e3e-e339-4d00-af49-8416421bcbb9)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Como rodar o projeto na sua máquina
+
+## Pré-requisitos
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+
+- Node.js (versão 12 ou superior)
+- Angular CLI (versão 12 ou superior)
+
+## Configuração do projeto
+Siga os passos abaixo para configurar o projeto em sua máquina:
+
+Clone o repositório para o seu ambiente local:
+`git clone https://github.com/RodrigoS2050/Meteora.git`
+
+Navegue até o diretório do projeto:
+`cd nome-do-repositorio`
+
+Instale as dependências do projeto:
+`npm install`
+
+## Executando o projeto
+Após a configuração, você pode executar o projeto localmente. Utilize o seguinte comando:
+`ng serve`
+
+A aplicação estará disponível em http://localhost:4200/. A página será recarregada automaticamente sempre que houver alterações no código.
+
+## Executando testes
+Este projeto utiliza o Karma e o Jasmine para execução de testes. Para rodar os testes unitários, utilize o seguinte comando:
+`ng test`
+
+Isso iniciará a execução dos testes e mostrará os resultados no terminal.
