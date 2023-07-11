@@ -58,7 +58,7 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
 Siga os passos abaixo para configurar o projeto em sua máquina:
 
 Clone o repositório para o seu ambiente local:
-`git clone https://github.com/RodrigoS2050/Meteora.git`
+`git clone https://github.com/RodrigoS2050/Buscante.git`
 
 Navegue até o diretório do projeto:
 `cd nome-do-repositorio`
