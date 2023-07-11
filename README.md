@@ -28,11 +28,18 @@ Buscante é uma aplicação web inovadora que permite aos usuários descobrir e 
 ## Projeto Completo (Web)
 
 
+![Buscante Web 1](https://github.com/RodrigoS2050/Buscante/assets/97991094/01a15275-15a3-4fd5-ad41-49142a20667e)
+
+![Buscante Web 2](https://github.com/RodrigoS2050/Buscante/assets/97991094/cf3ff8be-89cf-401d-8929-a3268493abd0)
+
+![Buscante Web 3](https://github.com/RodrigoS2050/Buscante/assets/97991094/a4c5d7ed-e457-4d4f-a780-1ed3418b86c5)
 
 ## Projeto Completo (Mobile)
 Este é um projeto totalmente responsivo utilizando o Bootstrap
 
+![Buscante Mobile 1](https://github.com/RodrigoS2050/Buscante/assets/97991094/f05c0ea4-8efd-4d45-8a95-2094f6858cf7)
 
+![Buscante Mobile 2](https://github.com/RodrigoS2050/Buscante/assets/97991094/d2abee7c-cb34-4a1c-8014-089b7a10b835)
 
 ## Testes Unitários
 Este projeto utiliza o Karma e o Jasmine para criação de testes unitários.
